@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Messaging App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Local Network Messaging App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div id="app">
       <div id="header">
-        <h1>Messaging App</h1>
+        <h1>Local Network Messaging</h1>
+        <p>Connected to local network</p>
       </div>
-      <div id="main">
-        <div id="conversation">
-          <!-- Messages will be inserted here -->
+      <div id="messages"></div>
+      <div id="compose">
+        <div class="avatar">
+          <i class="fas fa-user"></i>
         </div>
-        <form id="message-form">
-          <input type="text" id="message-input" placeholder="Type your message here">
-          <button type="submit">Send</button>
-        </form>
+        <textarea id="message"></textarea>
+        <button id="send">Send</button>
       </div>
     </div>
     <script src="app.js"></script>
