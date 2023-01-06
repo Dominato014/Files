@@ -1,44 +1,45 @@
-const app = {
-  // Initialize the app
-  init() {
-    // Get references to DOM elements
-    this.app = document.getElementById('app');
-    this.form = document.getElementById('message-form');
-    this.input = document.getElementById('message-input');
-    this.conversation = document.getElementById('conversation');
+const messages = document.getElementById("messages");
+const message = document.getElementById("message");
+const send = document.getElementById("send");
 
-    // Set up event listeners
-    this.form.addEventListener('submit', this.sendMessage.bind(this));
-  },
+function addMessage(text, type) {
+  // Create message element
+  const el = document.createElement("div");
+  el.classList.add("message", type);
 
-  // Send a message
-  sendMessage(event) {
-    // Prevent form submission
-    event.preventDefault();
+  // Add avatar element
+  const avatar = document.createElement("div");
+  avatar.classList.add("avatar");
+  const avatarIcon = document.createElement("i");
+  avatarIcon.classList.add("fas", "fa-user");
+  avatar.appendChild(avatarIcon);
+  el.appendChild(avatar);
 
-    // Get the message text
-    const text = this.input.value;
+  // Add content element
+  const content = document.createElement("div");
+  content.classList.add("content");
+  const contentParagraph = document.createElement("p");
+  contentParagraph.textContent = text;
+  content.appendChild(contentParagraph);
+  el.appendChild(content);
 
-    // Clear the input field
-    this.input.value = '';
+  // Add message to messages container
+  messages.appendChild(el);
 
-    // Create a message element
-    const message = document.createElement('div');
-    message.classList.add('message', 'sent');
-    message.innerHTML = `
-      <div class="avatar">
-        <i class="fas fa-user"></i>
-      </div>
-      <div class="text">${text}</div>
-    `;
+  // Scroll messages to bottom
+  messages.scrollTop = messages.scrollHeight;
+}
 
-    // Add the message to the conversation
-    this.conversation.appendChild(message);
+send.addEventListener("click", () => {
+  const text = message.value;
+  if (text === "") {
+    return;
+  }
+  message.value = "";
+  addMessage(text, "sent");
+});
 
-    // Scroll the conversation to the bottom
-    this.conversation.scrollTop = this.conversation.scrollHeight;
-  },
-};
-
-// Start the app
-app.init();
+addMessage("Hello!", "received");
+addMessage("Hi there!", "sent");
+addMessage("How are you doing?", "received");
+addMessage("I'm doing well, thank you!", "sent");
