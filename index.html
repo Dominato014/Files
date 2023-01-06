@@ -1,30 +1,24 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Local Network Messaging App</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div id="app">
-      <div id="header">
-        <h1>Local Network Messaging</h1>
-        <p>Connected to local network</p>
-      </div>
-      <div id="messages"></div>
-      <div id="compose">
-        <div class="avatar">
-          <i class="fas fa-user"></i>
-        </div>
-        <textarea id="message"></textarea>
-        <button id="send">Send</button>
-      </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Network Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <div id="header">
+      <h1>Local Network Chat</h1>
     </div>
-    <script src="app.js"></script>
-  </body>
+    <div id="messages-container">
+      <div id="messages"></div>
+    </div>
+    <div id="compose">
+      <textarea id="message"></textarea>
+      <button id="send">Send</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
 </html>
