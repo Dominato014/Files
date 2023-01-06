@@ -1,111 +1,121 @@
-* {
-  box-sizing: border-box;
+/* Main styles */
+
+body {
+  font-family: sans-serif;
+  color: #333;
   margin: 0;
   padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-  font-family: sans-serif;
-}
-
-body {
-  display: flex;
-  align-items: stretch;
 }
 
 #app {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
 }
 
 #header {
-  background-color: #333;
-  color: #fff;
+  background: #ddd;
   padding: 20px;
-}
-
-#sidebar {
-  width: 250px;
-  background-color: #ddd;
-  overflow: auto;
-}
-
-#sidebar h2 {
-  margin: 10px;
-  font-size: 20px;
-}
-
-#sidebar ul {
-  list-style: none;
-  margin: 10px;
-  padding: 0;
-}
-
-#sidebar li {
-  padding: 10px;
+  text-align: center;
   border-bottom: 1px solid #ccc;
 }
 
-#sidebar li:last-child {
-  border-bottom: none;
-}
-
-#sidebar li.active {
-  background-color: #eee;
-}
-
-#main {
+#messages {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  overflow: auto;
-}
-
-#conversation {
-  flex: 1;
+  overflow-y: scroll;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 
-#conversation .message {
-  margin: 10px 0;
+#compose {
+  background: #eee;
+  padding: 20px;
+  border-top: 1px solid #ccc;
   display: flex;
-  align-items: flex-start;
 }
 
-#conversation .message.sent {
-  align-items: flex-end;
+#compose textarea {
+  flex: 1;
+  padding: 10px;
+  border: 0;
+  font-size: 14px;
 }
 
-#conversation .message .avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #333;
+#compose button {
+  background: #333;
   color: #fff;
-  font-size: 24px;
-  text-align: center;
+  border: 0;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#compose .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
 }
 
-#conversation .message .text {
-  background-color: #eee;
-  color: #333;
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 16px;
-  max-width: 60%;
+#compose .avatar i {
+  font-size: 24px;
 }
 
-#conversation .message.sent .text {
-  background-color: #0084ff;
+/* Message styles */
+
+.message {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.message .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333;
   color: #fff;
-  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
 }
 
+.message .avatar i {
+  font-size: 24px;
+}
+
+.message .content {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.message .content p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.message.sent {
+  align-items: flex-end;
+}
+
+.message.received {
+  align-items: flex-start;
+}
+
+.message.sent .avatar {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.message.received .avatar {
+  margin-left: 0;
+  margin-right: auto;
+}
