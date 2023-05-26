@@ -1,39 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <Module>
 <ModulePrefs title="" />
 <Content type="html"><![CDATA[
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head><script async src="https://arc.io/widget.min.js#VTeH6AEZ"></script>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-    <meta name="description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes." />
-    <meta name="theme-color" content="#6aaa64" />
-    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/manifest.json" />
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/img/logo_32x32.png" type="image/x-icon" />
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/img/logo_32x32.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/img/logo_192x192.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/global.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/build/bundle.css" />
-    <!-- FB Meta Tags -->
-    <meta property="og:url" content="https://3kh0.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Wordle+ - A word guessing game" />
-    <meta property="og:description" content="Guess the word in 6 tries. Play daily, hourly and infinite modes." />
-    <meta property="og:image" content="img/og_1200x630.png" />
-    <script>
-      // PWA Service worker
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
-      }
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/js/main.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/tw31120071857/HTML-Games-V2/wordle/build/bundle.js"></script>
-    <title>Wordle | 3kh0</title>
+    <link rel="icon" href="https://hellowordl.net/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#57ac57" />
+    <meta name="description" content="A word-guessing game" />
+    <link rel="apple-touch-icon" href="https://hellowordl.net/logo192.png" />
+    <link rel="manifest" href="https://hellowordl.net/manifest.json" />
+    <title>hello wordl</title>
+    <script data-goatcounter="https://hellowordl.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script defer="defer" src="https://hellowordl.net/static/js/main.c11c6c32.js"></script>
+    <link href="https://hellowordl.net/static/css/main.3ba1d3fa.css" rel="stylesheet">
   </head>
-
-  <body></body>
+  <body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
 </html>
 
 ]]></Content>
