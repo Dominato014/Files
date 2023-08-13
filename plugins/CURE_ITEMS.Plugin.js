@@ -1,0 +1,6 @@
+/**
+ * credits @Atampy26 for guiding and shit
+ * code stolen form Moar Items plugin - by Anthony Fuller
+ * @licence https://www.mozilla.org/en-US/MPL/2.0
+ **/
+const randomUUID=require("crypto").randomUUID,{log:log,LogLevel:LogLevel}=require("@peacockproject/core/loggingInterop"),items=[{id:"PROP_GAS_GRENADE_CURE",type:"gear",subtype:"explosive",loadoutslot:"gear",repoid:"2ecc0dde-5d5f-4961-af76-e7c63d7d3405"},{id:"CURE_COIN",type:"gear",subtype:"distraction",loadoutslot:"gear",repoid:"6c3854f6-dbe0-410c-bd01-ddc35b402d0c"}];module.exports=function(e){const o=e.configManager.configs.allunlockables;items.forEach((e=>{o.push({Id:e.id,Guid:randomUUID(),Type:e.type,Subtype:e.subtype,RMTPrice:-1,GamePrice:-1,IsPurchasable:!1,IsPublished:!0,IsDroppable:!1,Capabilities:[],Qualities:{},Properties:{Gameplay:{},Quality:4,Rarity:"common",LoadoutSlot:e.loadoutslot,RepositoryId:e.repoid,RepositoryAssets:[e.repoid,e.repoid,e.repoid,e.repoid,e.repoid]},Rarity:"common"})})),log(LogLevel.INFO,"[CURE_ITEMS]  initializing... (Plugin initialized)")};
