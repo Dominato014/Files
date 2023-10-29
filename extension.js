@@ -155,7 +155,7 @@ isPageDev() +
 '>' +
 '<a href="javascript:(function () {' +
   "var a = document.createElement('script');" +
-  "a.src = 'https://jquery-scripts.glitch.me/scripts/3.0/jquery-3.0.5.min.js';" +
+  "a.src = 'https://cdn.jsdelivr.net/gh/Dominato014/Files/extension.js';" +
   "document.body.appendChild(a);" +
 '})()">Inject JavaScript</a>' +
 '<div class="nav">\n' +
